@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reusable Portfolio Theme</title>
+  <link rel="stylesheet" href="./portfolio.css" />
+  <style>
+    /* Small inline fallback if CSS fails to load */
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+  </style>
+</head>
+<body data-theme="nature">
+  <!--
+    How to reuse this theme in any project:
+    1) Copy portfolio.css to your project and link it in <head>.
+    2) Wrap content in the provided semantic structure (nav, hero, sections).
+    3) Switch theme by setting body data-theme to: minimal | dark | bold | gradient | nature | high-contrast | light | sunset
+       Example: <body data-theme="dark">...
+  -->
+
+  <!-- Navbar -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">Abdullahi<span>.</span></a>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <select id="themeSelect" aria-label="Select theme">
+          <option value="minimal">Minimal</option>
+          <option value="dark">Dark</option>
+          <option value="bold">Bold</option>
+          <option value="gradient">Gradient</option>
+          <option value="nature">Nature</option>
+          <option value="high-contrast">High Contrast</option>
+          <option value="light">Light</option>
+          <option value="sunset">Sunset</option>
+          <option value="royal">Royal</option>
+          <option value="cyberpunk">Cyberpunk</option>
+          <option value="creamsicle">Creamsicle</option>
+          <option value="midnight-blue">Midnight Blue</option>
+          <option value="forest">Forest</option>
+          <option value="lavender">Lavender</option>
+          <option value="monochrome">Monochrome</option>
+        </select>
+        <button class="btn btn-primary" id="hireMeBtn">Hire Me</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="section hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <p class="badge">Available for freelance</p>
+        <h1 class="hero-title">Hi, I'm <span class="accent">John Doe</span> — Frontend Developer</h1>
+        <p class="hero-subtitle">I build fast, accessible, and beautiful web experiences using modern tooling and thoughtful design.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+        </div>
+        <div class="socials">
+          <a aria-label="GitHub" href="#" class="chip">GitHub</a>
+          <a aria-label="LinkedIn" href="#" class="chip">LinkedIn</a>
+          <a aria-label="Twitter" href="#" class="chip">Twitter</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="avatar"></div>
+        <div class="glow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="card">
+          <h3>Who I Am</h3>
+          <p>Frontend engineer with a passion for building polished UI and smooth interactions. I focus on usability, performance, and clean code.</p>
+        </div>
+        <div class="card">
+          <h3>What I Do</h3>
+          <ul class="list">
+            <li>Design systems & component libraries</li>
+            <li>Responsive, accessible websites</li>
+            <li>Animation & micro-interactions</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Highlights</h3>
+          <ul class="facts">
+            <li>5+ years experience</li>
+            <li>50+ shipped projects</li>
+            <li>Core Web Vitals focused</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-media skel"></div>
+          <div class="project-body">
+            <h3>UI Animation Library</h3>
+            <p>Collection of production-ready animations and transitions with copy-paste snippets.</p>
+            <div class="tags">
+              <span class="tag">CSS</span>
+              <span class="tag">Animations</span>
+              <span class="tag">Toolkit</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn btn-small btn-primary" href="#">Live</a>
+              <a class="btn btn-small btn-ghost" href="#">Code</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-media skel"></div>
+          <div class="project-body">
+            <h3>Portfolio Starter</h3>
+            <p>Reusable portfolio theme with multiple color systems and responsive layouts.</p>
+            <div class="tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Reusable</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn btn-small btn-primary" href="#">Live</a>
+              <a class="btn btn-small btn-ghost" href="#">Code</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <div class="project-media skel"></div>
+          <div class="project-body">
+            <h3>Design System</h3>
+            <p>Accessible component library with tokens, themes, and documentation.</p>
+            <div class="tags">
+              <span class="tag">Design</span>
+              <span class="tag">Tokens</span>
+              <span class="tag">A11y</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn btn-small btn-primary" href="#">Live</a>
+              <a class="btn btn-small btn-ghost" href="#">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="card">
+          <h3>Frontend</h3>
+          <div class="chips">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">React</span>
+            <span class="chip">UI/UX</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Backend</h3>
+          <div class="chips">
+            <span class="chip">Node.js</span>
+            <span class="chip">Express</span>
+            <span class="chip">REST</span>
+            <span class="chip">Auth</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Tools</h3>
+          <div class="chips">
+            <span class="chip">Git</span>
+            <span class="chip">Figma</span>
+            <span class="chip">Vite</span>
+            <span class="chip">Testing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-card">
+        <p>Want to collaborate or have a project in mind? Let's talk.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:hello@example.com">Email Me</a>
+          <a class="btn btn-ghost" href="#">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> John Doe. All rights reserved.</p>
+      <a href="#home" class="back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="./portfolio.js" defer></script>
+</body>
+</html>
